@@ -5,13 +5,15 @@ from flask import redirect, url_for
 import socket
 
 TCP_IP = '192.168.0.116'
-TCP_PORT = 5005
+TCP_PORT = 50
 BUFFER_SIZE = 1024
 
-#s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#s.bind((TCP_IP, TCP_PORT))
-#s.listen(1)
-#conn, addr = s.accept()
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind((TCP_IP, TCP_PORT))
+s.listen(1)
+conn, addr = s.accept()
 
 app = Flask(__name__)
 
@@ -23,12 +25,12 @@ def index():
         if request.form.get('ON') == 'Sensor ON':
             # pass
 
-            #print(addr)
-            #while 1:
-                #data = conn.recv(BUFFER_SIZE)
-                #if not data: break
-                #print(data)
-                #conn.send(data)  # echo
+            print(addr)
+            while 1:
+                data = conn.recv(BUFFER_SIZE)
+                if not data: break
+                print(data)
+                conn.send(data)  # echo
 
             print("Sensor ON")
         elif  request.form.get('OFF') == 'Sensor OFF':
