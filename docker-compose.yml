@@ -13,6 +13,7 @@ services:
 
   tcp:
     build: ./tcpserver
+    privileged: true
     volumes:
       - 'shareddata:/data'
     ports:
