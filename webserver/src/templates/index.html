@@ -1,5 +1,7 @@
 <!doctype html>
+<head>
 <title>Sensor Stream Server</title>
+</head>
 <h2>Top level page with links to all other functionality</h2>
 
 <p>
@@ -8,5 +10,10 @@
 	<a href="{{ url_for('.sensor_on') }}">Sensor_ON</a>
 	<a href="{{ url_for('.sensor_off') }}">Sensor_OFF</a>
 	<a href="{{ url_for('.status') }}">Status</a>
+	<a href="{{ url_for('.connect') }}">connect</a>
 	<a href="{{ url_for('.exit') }}">Exit</a>
 </p>
+<div>
+    <pre>{{n}}</pre>
+</div>
+</html>

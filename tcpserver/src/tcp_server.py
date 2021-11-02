@@ -36,8 +36,10 @@ with conn:
     f.flush()
     while True:
         data = conn.recv(1024)
+        data = data.decode()
         print('Received', repr(data))
-        f.write("Received data\n")
+        data = data + '\n'
+        f.write(data)
         f.flush()
         time.sleep(1)
         if not data: break
