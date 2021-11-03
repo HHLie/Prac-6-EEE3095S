@@ -2,7 +2,10 @@ from flask import Flask, send_file, render_template
 import socket
 import os
 
-#jank coding 1010
+
+######
+TCP Setup
+######
 TCP_IP = '0.0.0.0'
 TCP_PORT = 5050
 BUFFER_SIZE = 20
@@ -17,7 +20,7 @@ while not connected:
     except Exception as e:
         pass
 
-#conn, addr = web_s.accept()
+######
 
 app = Flask(__name__)
 
@@ -65,7 +68,6 @@ def sensor_off():
 def status():
     conn.send(str(3).encode())
     print("status")
-    #print(conn.recv(20).decode())
     stat = conn.recv(20).decode()
     temp = 'Sensor is not sampling'
     if stat == 'True':

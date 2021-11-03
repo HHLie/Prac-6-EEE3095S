@@ -1,19 +1,26 @@
 <!doctype html>
 <head>
-<title>Sensor Stream Server</title>
+    <title>Sensor Stream Server</title>
 </head>
-<h2>Top level page with links to all other functionality</h2>
+<body>
 
-<p>
-	<button href="{{ url_for('.download_file') }}">Download</button>
-	<button href="{{ url_for('.check') }}">Logs_Check</button>
-	<button href="{{ url_for('.sensor_on') }}">Sensor_ON</button>
-	<button href="{{ url_for('.sensor_off') }}">Sensor_OFF</button>
-	<button href="{{ url_for('.status') }}">Status</button>
-	<button href="{{ url_for('.connect') }}">connect</button>
-	<button href="{{ url_for('.exit') }}">Exit</button>
-</p>
-<div>
-    <pre>{{n}}</pre>
-</div>
+    <h2>Top level page with links to all other functionality</h2>
+    <p>EEE3095S Practical 6 - Part 2(Mini Project)  </p>
+    <p>Done by LXXHSI007 & VBNREE001  </p>
+    <p>
+	    <button href="{{ url_for('.download_file') }}">Download</button>
+	    <button href="{{ url_for('.check') }}">Logs_Check</button>
+	    <button href="{{ url_for('.sensor_on') }}">Sensor_ON</button>
+	    <button href="{{ url_for('.sensor_off') }}">Sensor_OFF</button>
+	    <button href="{{ url_for('.status') }}">Status</button>
+	    <button href="{{ url_for('.connect') }}">connect</button>
+	    <button href="{{ url_for('.exit') }}">Exit</button>
+    </p>
+    <section>
+    <div>
+        <pre>{{n}}</pre>
+    </div>
+    </section>
+</body>
+
 </html>
