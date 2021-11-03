@@ -9,7 +9,15 @@ BUFFER_SIZE = 20
 web_s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 web_s.bind((TCP_IP, TCP_PORT))
 web_s.listen(1)
-conn, addr = web_s.accept()
+connected = False
+while not connected:
+    try:
+        conn, addr = web_s.accept()
+        connected = True
+    except Exception as e:
+        pass
+
+#conn, addr = web_s.accept()
 
 app = Flask(__name__)
 
