@@ -14,3 +14,20 @@ Click on download.
 File downloaded and opened.
 ![image](https://user-images.githubusercontent.com/53212860/140176688-a7fdd3d8-1e3f-4d2f-865f-8e2b7d81bd8b.png)
 
+Check Logs:
+Click on Logs_Check.
+![image](https://user-images.githubusercontent.com/53212860/140177000-6c32ad18-6fac-4ec2-8d01-66cbeeec94a7.png)
+Logs appear.
+![image](https://user-images.githubusercontent.com/53212860/140177108-8a27fce1-1376-415b-a804-b77ce17ed5fd.png)
+
+Sensor On.
+
+Sensor Off.
+![image](https://user-images.githubusercontent.com/53212860/140177255-b16a733e-5704-4575-8602-c3e0f5a1b13e.png)
+
+Status.
+When sensor is on.
+
+When sensor is off.
+![image](https://user-images.githubusercontent.com/53212860/140177355-012a9a51-a2bb-4e48-ae71-bf85d6027bd9.png)
+
