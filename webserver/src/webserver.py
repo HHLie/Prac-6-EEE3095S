@@ -1,10 +1,10 @@
 from flask import Flask, send_file, render_template
 import socket
 import os
-
+import time
 
 ######
-TCP Setup
+#TCP Setup
 ######
 TCP_IP = '0.0.0.0'
 TCP_PORT = 5050
@@ -13,12 +13,8 @@ web_s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 web_s.bind((TCP_IP, TCP_PORT))
 web_s.listen(1)
 connected = False
-while not connected:
-    try:
-        conn, addr = web_s.accept()
-        connected = True
-    except Exception as e:
-        pass
+conn, addr = web_s.accept()
+
 
 ######
 
@@ -56,30 +52,29 @@ def download_file():
 def sensor_on():
     conn.send(str(1).encode())
     print("sensor_on")
-    return render_template('index.html')
+    temp = "Sampling started"
+    return render_template('index.html', n = temp)
 
 @app.route('/Sensor_OFF')
 def sensor_off():
     conn.send(str(2).encode())
     print("sensor_off")
-    return render_template('index.html')
+    temp = "Sampling stopped"
+    return render_template('index.html', n = temp)
 
 @app.route('/Status')
 def status():
     conn.send(str(3).encode())
     print("status")
+    time.sleep(0.5)
     stat = conn.recv(20).decode()
+    print(stat)
+    #
     temp = 'Sensor is not sampling'
     if stat == 'True':
         temp = 'Sensor is sampling'
 
     return render_template('index.html', n=temp)
-
-@app.route('/Connect')
-def connect():
-    print('Connected by', addr)
-    print("connect")
-    return render_template('index.html')
 
 @app.route('/Exit')
 def exit():

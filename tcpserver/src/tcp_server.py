@@ -30,15 +30,7 @@ if s is None:
     sys.exit(1)
 
 
-connected = False
-while not connected:
-    try:
-        conn, addr = s.accept()
-        connected = True
-    except Exception as e:
-        pass
-
-#conn, addr = s.accept()
+conn, addr = s.accept()
 with conn:
     print('Connected by', addr)
     f.write("Connected by" + str(addr) + "\n")
