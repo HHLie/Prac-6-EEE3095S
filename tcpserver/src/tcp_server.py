@@ -1,27 +1,25 @@
+#Code taken from UCT-EE-OCW/EEE3096S-2021/WorkPackage6
+
 import socket
 import sys
 import time
 
-HOST = None  # Symbolic name meaning all available interfaces
+HOST = '0.0.0.0'  # Symbolic name meaning all available interfaces
 PORT = 5003  # Arbitrary non-privileged port
 s = None
 f = open("/data/sensorlog.txt", "w+")
-for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC,
-                              socket.SOCK_STREAM, 0, socket.AI_PASSIVE):
-    af, socktype, proto, canonname, sa = res
-    try:
-        s = socket.socket(af, socktype, proto)
-    except OSError as msg:
-        s = None
-        continue
-    try:
-        s.bind(sa)
-        s.listen(1)
-    except OSError as msg:
-        s.close()
-        s = None
-        continue
-    break
+
+#try to make socket
+try:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+except OSError as msg:
+    s = None
+try:
+    s.bind((HOST,PORT))
+    s.listen(1)
+except OSError as msg:
+    s.close()
+    s = None
 
 if s is None:
     print('could not open socket')
@@ -39,8 +37,11 @@ with conn:
         data = conn.recv(1024)
         data = data.decode()
         print('Received', repr(data))
+        #added formatting to data
         data = data + '\n'
+        #write data to sensorlog.txt
         f.write(data)
         f.flush()
+        #added wait to help with Received data handling
         time.sleep(1)
         if not data: break
