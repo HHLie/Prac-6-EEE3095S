@@ -2,6 +2,16 @@
 TCP and Webserver git repo.
 LXXHSI007 & VBNREE001.
 
+## Scripts: ##
+#### webserver.py ####
+This script renders a html web page using the Flask library.
+6 hyperlinks will be created with different functionality when clicked.
+A TCP connection is made with the sensor node. With this connection, the webserver is able to communicate some function commands to the sensor node
+
+#### tcp_server.py ####
+This script, a TCP connection is made with the sensor to receive data.
+This data is written into a text file called sensorlogs.txt
+
 ## Below is a sped up video of the 6 functions: ##
 
 https://user-images.githubusercontent.com/53212860/140175941-8a39e2a1-ce3c-400b-a160-fe611245175b.mp4
