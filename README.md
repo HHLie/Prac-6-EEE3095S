@@ -8,9 +8,10 @@ https://user-images.githubusercontent.com/53212860/140175941-8a39e2a1-ce3c-400b-
 
 ## Screenshots of both Pi devices running: ##
 #### Webserver. ####
-![webserver_running](https://user-images.githubusercontent.com/53212860/140295290-1771018f-1e58-4e63-9a39-679e98b653a6.png)
+![webserver_running](https://user-images.githubusercontent.com/53212860/140295539-ec29ec90-f832-4c65-bdda-873f500e6fdb.png)
+
 #### Client. ####
-![client_running](https://user-images.githubusercontent.com/53212860/140295298-72b857c5-f401-4e0f-85a2-a3adb7078575.png)
+![client_running](https://user-images.githubusercontent.com/53212860/140295550-53253446-6544-4c28-a949-ffcf299db6b6.png)
 
 
 ## Some screenshots of the functions: ##
