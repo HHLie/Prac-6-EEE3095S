@@ -53,3 +53,7 @@ When sensor is on.
 When sensor is off.
 ![image](https://user-images.githubusercontent.com/53212860/140177521-8ab7e62f-0ca0-4c05-9ab5-69db1bf59d45.png)
 
+#### Exit. ####
+![image](https://user-images.githubusercontent.com/53212860/140415767-46ed93a2-689d-434c-9825-76db14807659.png)
+
+
