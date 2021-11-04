@@ -25,6 +25,8 @@ https://user-images.githubusercontent.com/53212860/140175941-8a39e2a1-ce3c-400b-
 
 
 ## Some screenshots of the functions: ##
+### Landing Page: ###
+![image](https://user-images.githubusercontent.com/53212860/140415268-1d430eb9-a951-4eba-b4d7-e070609047ed.png)
 
 ### Download: ###
 #### Click on download. ####
