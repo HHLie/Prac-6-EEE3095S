@@ -6,6 +6,13 @@ LXXHSI007 & VBNREE001.
 
 https://user-images.githubusercontent.com/53212860/140175941-8a39e2a1-ce3c-400b-a160-fe611245175b.mp4
 
+## Screenshots of both Pi devices running: ##
+#### Webserver. ####
+![webserver_running](https://user-images.githubusercontent.com/53212860/140295290-1771018f-1e58-4e63-9a39-679e98b653a6.png)
+#### Client. ####
+![client_running](https://user-images.githubusercontent.com/53212860/140295298-72b857c5-f401-4e0f-85a2-a3adb7078575.png)
+
+
 ## Some screenshots of the functions: ##
 
 ### Download: ###
