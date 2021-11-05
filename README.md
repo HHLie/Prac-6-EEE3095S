@@ -1,6 +1,7 @@
 # Prac 6 EEE3095S
-TCP and Webserver git repo.
-LXXHSI007 & VBNREE001.
+TCP and Webserver git repo.  
+LXXHSI007 & VBNREE001.  
+The skeleton code is given by the WorkPackage github repo (https://github.com/UCT-EE-OCW/EEE3096S-2021/tree/main/WorkPackage6).  
 
 ## Scripts: ##
 #### webserver.py ####
